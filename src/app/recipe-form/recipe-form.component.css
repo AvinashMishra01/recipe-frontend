@@ -1,0 +1,35 @@
+.main_container {
+        margin-top: 5%;
+}
+
+.text_decoration {
+        font-family: cursive;
+            text-shadow: 0 5px 10px #0d0101;
+}
+
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+.star {
+    color: red;
+}
+
+.card_header {
+
+    text-wrap: nowrap;
+
+}

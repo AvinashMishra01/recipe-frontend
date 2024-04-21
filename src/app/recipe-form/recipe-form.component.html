@@ -1,0 +1,80 @@
+
+
+
+<div class="container mb-3 main_container">
+    <div class="row justify-content-center mb-3">
+        <div class="col-sm-12 col-md-8 col-lg-7">
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card_header">
+                        <div class="row">
+                            <div class="col-2 text-left"> <button class="btn btn-outline-light" mat-mini-fab color="yel"
+                                    aria-label="Example icon button with a menu icon" (click)="goBack()">
+                                    <mat-icon>keyboard_arrow_left</mat-icon>
+                                </button> </div>
+                            <div class="col-10 text-center">
+                                <h5 class="text_decoration" style="font-size: 1.2rem; margin-left: -11%;"><b>Recipe List - {{updateIsClicked
+                                        ? 'Update' : 'Create'}} </b> </h5>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col">
+                            <h2 class="text_decoration">{{updateIsClicked ? 'Update Recipe' : 'Create Recipe'}} </h2>
+                        </div>
+                    </div>
+
+                    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+                        <!-- Recipe Name   -->
+                        <div class="form-group mb-3 text-left text_decoration">
+                            <label for="title">Recipe Name<span class="star">*</span> :</label>
+                            <input type="text" class="form-control" id="title" formControlName="recipe_name"
+                                placeholder="Recipe Name">
+                        </div>
+                        <!-- Ingredients   -->
+                        <div class="form-group mb-3 text-left text_decoration">
+                            <label for="title">Ingredients<span class="star">*</span> : </label>
+                            <textarea type="text" class="form-control"  formControlName="ingredients"
+                                placeholder="Write ingredients here..."> </textarea>
+                        </div>
+                        <!-- Instructions   -->
+                        <div class="form-group mb-3 text-left text_decoration">
+                            <label for="date">Instructions<span class="star">*</span> :</label>
+                            <textarea type="text" class="form-control" formControlName="instructions" placeholder="Write instructions here...">
+                                </textarea>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="row text-center ">
+                    <div class="col-sm ">
+                        <div *ngIf="updateIsClicked==false">
+                            <button type="submit" class="btn btn-primary mb-3" (click)="onSubmit()">Submit</button>
+                        </div>
+                        <div *ngIf="updateIsClicked==true">
+                            <button type="submit" class="btn btn-primary mb-3" (click)="onUpdate()">Update</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

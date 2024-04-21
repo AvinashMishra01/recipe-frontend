@@ -1,0 +1,61 @@
+
+.text_decoration {
+    font-size: 2.4rem;
+    border-bottom: 1.5px solid skyblue;
+    font-family: cursive;
+    text-shadow: 0 6px 3px #000000;
+        color: #ffe200;
+}
+
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+
+mat-card {
+    margin: 2%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 2px;
+
+}
+
+.card_main {
+        background-color: #080303b5;
+            border: 2px solid #faf2f2;
+            transition: background-color 0.3s ease;
+}
+
+.card_main:hover {
+    .card:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Change background color on hover (adjust the rgba values as needed for the desired transparency) */
+        }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .card_content {
+        overflow-x: scroll;
+    }
+
+}
